@@ -2,7 +2,7 @@ if (globalThis.chrome) {
 	if (chrome.storage) {
 		chrome.action.onClicked.addListener(createNewTab)
 		chrome.runtime.onInstalled.addListener(handleInstalled)
-		chrome.runtime.setUninstallURL('https://bonjourr.fr/goodbye')
+		chrome.runtime.setUninstallURL('https://github.com/Pro-Bandey/Pakjourr/issues/new/choose')
 	}
 } else {
 	self.addEventListener('activate', updateCache)
