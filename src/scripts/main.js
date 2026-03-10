@@ -6421,14 +6421,14 @@
     },
         _i = {
             chrome:
-                "https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd/reviews",
+                "https://github.com/Pro-Bandey/DashX",
             opera:
-                "https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd/reviews",
+                "https://github.com/Pro-Bandey/DashX",
             firefox:
-                "https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/",
-            safari: "https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236",
-            edge: "https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid",
-            other: "https://bonjourr.fr/help#%EF%B8%8F-reviews",
+                "https://github.com/Pro-Bandey/DashX",
+            safari: "https://github.com/Pro-Bandey/DashX",
+            edge: "https://github.com/Pro-Bandey/DashX",
+            other: "https://github.com/Pro-Bandey/DashX",
         };
     function Si(e, t) {
         if (
@@ -6465,7 +6465,7 @@
                         "Love using Bonjourr? Consider giving us a review or donating, that would help a lot! 😇",
                     )),
                         a.appendChild(Ii(_i[Fe], kt("Review"))),
-                        a.appendChild(Ii("https://ko-fi.com/bonjourr", kt("Donate")))),
+                        a.appendChild(Ii("https://github.com/Pro-Bandey/DashX", kt("Donate")))),
                     "announce" === e)
             ) {
                 const e = bt(),
@@ -6474,7 +6474,7 @@
                 ((i.innerHTML = t),
                     a.appendChild(
                         Ii(
-                            "https://ko-fi.com/post/Bonjourr-22-pomodoro-timer-new-look-right-click-F1F11P47J8",
+                            "https://github.com/Pro-Bandey/DashX",
                             n,
                         ),
                     ));
@@ -10617,10 +10617,10 @@
             o = Math.random() > 0.5;
         (e &&
             t &&
-            ((e.href = o ? "https://victr.me/" : "https://tahoe.be/"),
+            ((e.href = o ? "https://github.com/Pro-Bandey" : "https://github.com/Pro-Bandey/DashX"),
                 (t.href = o ? "https://tahoe.be/" : "https://victr.me/"),
-                (e.textContent = o ? "Victor Azevedo" : "Tahoe Beetschen"),
-                (t.textContent = o ? "Tahoe Beetschen" : "Victor Azevedo")),
+                (e.textContent = o ? "Pro-Bandey" : "DashX"),
+                (t.textContent = o ? "DashX" : "Pro-Bandey")),
             n && (n.textContent = Ge.about.version));
     }
     function _l() {

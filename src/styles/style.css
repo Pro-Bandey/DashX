@@ -289,7 +289,7 @@ body::-webkit-scrollbar {
 aside::-webkit-scrollbar,
 textarea::-webkit-scrollbar,
 .pce-overlays::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 aside::-webkit-scrollbar-track,
@@ -2089,7 +2089,7 @@ aside select {
   padding-inline: 13px;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: var(--color-dialog-input-bg);
+  background-color: var(--color-input);
 }
 
 @media only screen and (hover: hover) {
@@ -6590,6 +6590,26 @@ html[data-supporters-modal] #popup.shown {
     min-width: 25px;
     font-size: 15px;
   }
+}
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    margin-block: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-orange);
+    border-radius: 100px;
+    cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--color-orange);
+    cursor: grabbing;
 }
 
 /* src/styles/style.css */
