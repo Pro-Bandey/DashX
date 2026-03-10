@@ -1,1 +1,21 @@
-<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g fill="#fff" transform="translate(-6.31306 .5)"><path d="m323.5 42 8.778 23.722 23.722 8.778-23.722 8.778-8.778 23.722-8.778-23.722-23.722-8.778 23.722-8.778z" transform="matrix(1.12308 0 0 1.12308 -51.8154 -23.1692)"/><path d="m323.5 42 8.778 23.722 23.722 8.778-23.722 8.778-8.778 23.722-8.778-23.722-23.722-8.778 23.722-8.778z" transform="matrix(2.34488 0 0 2.34488 -327.361 -41.9851)"/><path d="m204.014 80.677c-26.168 32.03-41.868 72.93-41.868 117.469 0 102.575 83.278 185.854 185.854 185.854 18.771 0 36.897-2.789 53.974-7.972-33.715 65.856-102.263 110.972-181.265 110.972-112.315 0-203.5-91.185-203.5-203.5 0-106.699 82.294-194.329 186.805-202.823z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512"
+    height="512" viewBox="0 0 512 512">
+    <defs>
+        <linearGradient id="a" x1="54.33" x2="187.18" y1="29.03" y2="259.13"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f1fba1" />
+            <stop offset=".45" stop-color="#f1fba1" />
+            <stop offset="1" stop-color="#fdee83" />
+        </linearGradient>
+        <symbol id="b" overflow="visible" viewBox="0 0 270 270">
+            <path fill="url(#a)" stroke="#ffed78" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="6"
+                d="M252.25 168.63C178.13 168.63 118 109.35 118 36.21A131 131 0 0 1 122.47 3C55.29 10.25 3 66.37 3 134.58 3 207.71 63.09 267 137.21 267 199.69 267 252 224.82 267 167.79a136 136 0 0 1-14.75.84">
+                <animateTransform additive="sum" attributeName="transform" dur="6s"
+                    repeatCount="indefinite" type="rotate"
+                    values="-15 135 135; 9 135 135; -15 135 135" />
+            </path>
+        </symbol>
+    </defs>
+    <use xlink:href="#b" width="270" height="270" transform="translate(121 121)" />
+</svg>
