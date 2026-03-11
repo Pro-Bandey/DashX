@@ -289,7 +289,7 @@ body::-webkit-scrollbar {
 aside::-webkit-scrollbar,
 textarea::-webkit-scrollbar,
 .pce-overlays::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 aside::-webkit-scrollbar-track,
@@ -304,7 +304,7 @@ textarea::-webkit-scrollbar-thumb,
 .pce-overlays::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 10px 10px var(--color-border);
   border: solid 3px transparent;
-  border-radius: 10px;
+  border-radius: 100px;
 }
 
 /* src/styles/interface/global.css */
@@ -916,222 +916,6 @@ body.init #background-media .background-image {
 
 #error .error-buttons-close {
   background-color: var(--color-blue);
-}
-
-/* src/styles/interface/opera.css */
-#opera-explainer {
-  opacity: 0;
-  outline: none;
-  color: #ddd;
-  max-width: 30em;
-  padding: 1em 2em;
-  line-height: 1.5em;
-  transition: opacity 0.4s 1s;
-}
-
-#opera-explainer::backdrop {
-  transition: background-color 6s;
-}
-
-#opera-explainer li {
-  list-style-type: circle;
-}
-
-#opera-explainer div {
-  padding: 1em 0;
-  text-align: initial;
-}
-
-#opera-explainer a {
-  color: var(--color-blue);
-  text-decoration: none;
-}
-
-#opera-explainer a:hover {
-  text-decoration: underline;
-}
-
-#opera-explainer.shown {
-  opacity: 1;
-}
-
-#opera-explainer.shown::backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-/* src/styles/interface/popup.css */
-#popup {
-  display: flex;
-  position: fixed;
-  box-sizing: border-box;
-  font-size: 15px;
-  bottom: 28px;
-  left: 28px;
-  gap: 0.6em;
-  opacity: 0;
-  z-index: 1;
-  transition: opacity 0.2s;
-}
-
-#popup.shown,
-#popup.shown #popup_text,
-#popup.shown #popup_buttons a {
-  opacity: 1;
-}
-
-#popup_text,
-#popup_buttons a {
-  border-radius: 14px;
-  opacity: 0;
-  cursor: pointer;
-  backdrop-filter: blur(2em);
-  -webkit-backdrop-filter: blur(2em);
-  transition:
-    opacity 2s,
-    background-color 0.1s,
-    color 0.1s;
-}
-
-#popup_buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  min-width: 9em;
-  gap: 0.6em;
-}
-
-#popup_buttons a {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: white;
-  background-color: #fff2;
-  border: 1px solid #fff1;
-}
-
-#popup_buttons a:hover {
-  background-color: #fff4;
-}
-
-#popup_buttons a:active {
-  opacity: 0.8;
-}
-
-#popup_text {
-  display: flex;
-  position: relative;
-  align-items: center;
-  text-align: initial;
-  column-gap: 1em;
-  padding: 1em;
-  overflow: hidden;
-  background-color: #fff2;
-  border: 1px solid #fff1;
-}
-
-#popup_icon {
-  transition: opacity 0.1s;
-}
-
-#popup_desc {
-  line-height: 1.4em;
-  transition: color 0.1s;
-}
-
-#popup_close {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 0;
-  opacity: 0;
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-  font-size: 1.6em;
-  font-weight: bolder;
-  transition: opacity 0.1s, background-color 0.1s;
-}
-
-#popup_close:hover {
-  opacity: 1;
-  background-color: #2222;
-}
-
-#popup_close:active {
-  background-color: #2224;
-}
-
-#popup_close:hover~#popup_desc {
-  color: transparent;
-}
-
-#popup_close:hover~#popup_icon {
-  opacity: 0;
-}
-
-#popup.review #popup_release,
-#popup.review #popup_icon {
-  display: none;
-}
-
-#popup.review #popup_desc {
-  width: 16em;
-}
-
-#popup.announce {
-  flex-direction: column;
-}
-
-#popup.announce.withIcon #popup_icon {
-  display: block;
-}
-
-#popup.announce #popup_desc {
-  width: 19em;
-}
-
-#popup.announce #popup_review,
-#popup.announce #popup_donate {
-  display: none;
-}
-
-#popup.announce #popup_buttons a {
-  min-height: 3em;
-}
-
-#popup_icon {
-  display: none;
-  width: 4em;
-  height: 4em;
-  border-radius: 1em;
-}
-
-@media screen and (max-width: 600px) {
-  body #popup {
-    width: 70%;
-    max-width: 28em;
-    left: unset;
-    right: unset;
-    padding-inline: 4vw;
-    flex-direction: column;
-    font-size: 12px;
-  }
-
-  body #popup.review #popup_desc {
-    width: 100%;
-  }
-
-  body #popup_buttons {
-    flex-direction: row;
-    height: 2.5em;
-  }
-
-  body #popup_buttons a {
-    width: 100%;
-  }
 }
 
 /* src/styles/settings/global.css */
@@ -2089,7 +1873,7 @@ aside select {
   padding-inline: 13px;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: var(--color-dialog-input-bg);
+  background-color: var(--color-input);
 }
 
 @media only screen and (hover: hover) {
@@ -6306,10 +6090,6 @@ html[data-supporters-modal] #supporters-modal-container {
   pointer-events: all;
 }
 
-html[data-supporters-modal] #popup.shown {
-  opacity: 0;
-}
-
 #supporters-modal-container #glitter {
   pointer-events: none;
   width: 100dvw;
@@ -6590,6 +6370,26 @@ html[data-supporters-modal] #popup.shown {
     min-width: 25px;
     font-size: 15px;
   }
+}
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    margin-block: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-orange);
+    border-radius: 100px;
+    cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--color-orange);
+    cursor: grabbing;
 }
 
 /* src/styles/style.css */

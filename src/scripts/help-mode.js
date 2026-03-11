@@ -19,7 +19,7 @@ function exportToJsonFile(e) {
     o = URL.createObjectURL(t),
     n = document.createElement("a");
   ((n.href = o),
-    (n.download = `bonjourr-${new Date().toLocaleString()}.json`),
+    (n.download = `dashx-${new Date().toLocaleString()}.json`),
     n.click(),
     URL.revokeObjectURL(o),
     document.querySelector(".reset") &&
@@ -32,24 +32,24 @@ async function downloadSettings() {
 async function getDataAsString() {
   return "undefined" != typeof chrome && chrome?.storage
     ? JSON.stringify(await chrome.storage.sync.get(), null, 2)
-    : (localStorage.bonjourr ?? "");
+    : (localStorage.dashx ?? "");
 }
 function resetOnce() {
   const e = document.querySelector("#help-mode .reset"),
     t = e.querySelector("span");
-  ((e.title = "You're about to reset Bonjourr to its default configuration."),
+  ((e.title = "You're about to reset DashX to its default configuration."),
     e.classList.add("danger"),
     (t.textContent = "Are you sure?"),
     e.addEventListener("click", resetApply));
 }
 async function resetApply() {
   const e = await getDataAsString(),
-    t = `bonjourr-archive-${new Date().toLocaleString()}`;
+    t = `dashx-archive-${new Date().toLocaleString()}`;
   (chrome?.storage &&
     (chrome.storage.sync.clear(), chrome.storage.local.clear()),
     localStorage &&
       Object.keys(localStorage).forEach((e) => {
-        !1 === e.startsWith("bonjourr-archive-") && localStorage.removeItem(e);
+        !1 === e.startsWith("dashx-archive-") && localStorage.removeItem(e);
       }),
     (localStorage[t] = e));
   const o = document.querySelector("#help-mode .reset"),

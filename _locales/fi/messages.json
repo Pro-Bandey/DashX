@@ -1,10 +1,10 @@
 {
 	"extensionName": {
-		"message": "Bonjourr · Minimalistinen Aloitussivu",
+		"message": "DashX · Minimalistinen Aloitussivu",
 		"description": "laajennuksen nimi"
 	},
 	"extensionDesc": {
-		"message": "Paranna sinun web-selauskokemustasi Bonjourrin avulla, kaunis, muokattava ja kevyt aloitussivu.",
+		"message": "Paranna sinun web-selauskokemustasi DashXin avulla, kaunis, muokattava ja kevyt aloitussivu.",
 		"description": "laajennuksen kuvaus"
 	}
 }

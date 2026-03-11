@@ -2,7 +2,7 @@ globalThis.chrome
   ? chrome.storage &&
     (chrome.action.onClicked.addListener(createNewTab),
     chrome.runtime.onInstalled.addListener(handleInstalled),
-    chrome.runtime.setUninstallURL("https://bonjourr.fr/goodbye"))
+    chrome.runtime.setUninstallURL("https://github.com/Pro-Bandey/DashX"))
   : (self.addEventListener("activate", updateCache),
     self.addEventListener("fetch", retrieveCache));
 const CACHE_KEY = "22.0.0",
