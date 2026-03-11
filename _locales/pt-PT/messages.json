@@ -1,10 +1,10 @@
 {
 	"extensionName": {
-		"message": "Bonjourr · Página inicial minimalista",
+		"message": "DashX · Página inicial minimalista",
 		"description": "nome da extensão"
 	},
 	"extensionDesc": {
-		"message": "Melhora a tua experiência de navegação com Bonjourr, uma página inicial bonita, leve e personalizável.",
+		"message": "Melhora a tua experiência de navegação com DashX, uma página inicial bonita, leve e personalizável.",
 		"description": "descrição da extensão"
 	}
 }

@@ -1134,7 +1134,7 @@
         $e = "https://services.bonjourr.fr",
         ze = globalThis.ENV ?? "TEST",
         Ne = crypto.randomUUID(),
-        Me = new BroadcastChannel("bonjourr_tabs"),
+        Me = new BroadcastChannel("dashx_tabs"),
         De =
             je.includes(Be.platform) ||
                 (Be.userAgent?.includes("Mac") && "ontouchend" in document)
@@ -1205,8 +1205,6 @@
             dateformat: "auto",
             quicklinks: !0,
             textShadow: 0.2,
-            announcements: "major",
-            review: 0,
             css: "",
             hide: {},
             linkstyle: "medium",
@@ -1297,7 +1295,6 @@
                 weightlist: [],
                 weight: "windows" === De ? "400" : "300",
             },
-            supporters: { enabled: !0 },
             move: { selection: "single", layouts: {} },
         },
         Ve = {
@@ -1429,10 +1426,10 @@
                     }
                     case "localstorage": {
                         if ("object" != typeof e) return;
-                        const t = mt(at(localStorage.bonjourr) ?? {});
+                        const t = mt(at(localStorage.dashx) ?? {});
                         for (const [n, o] of Object.entries(e)) t[n] = o;
                         return (
-                            (localStorage.bonjourr = JSON.stringify(t ?? {})),
+                            (localStorage.dashx = JSON.stringify(t ?? {})),
                             void globalThis.dispatchEvent(new Event("storage"))
                         );
                     }
@@ -1465,7 +1462,7 @@
                     case "webext-local":
                         return void (await chrome.storage.local.remove("syncStorage"));
                     case "localstorage":
-                        return void localStorage.removeItem("bonjourr");
+                        return void localStorage.removeItem("dashx");
                     default:
                 }
             },
@@ -1560,7 +1557,7 @@
         clearall: async function () {
             (sessionStorage.clear(),
                 Object.keys(localStorage).forEach((e) => {
-                    !1 === e.startsWith("bonjourr-archive-") &&
+                    !1 === e.startsWith("dashx-archive-") &&
                         localStorage.removeItem(e);
                 }));
             try {
@@ -1616,7 +1613,7 @@
                 return mt(e);
             }
             default:
-                return mt(at(localStorage.bonjourr) ?? {});
+                return mt(at(localStorage.dashx) ?? {});
         }
     }
     async function dt(e) {
@@ -1789,225 +1786,6 @@
     function Ct(e) {
         It ? e() : qt.push(e);
     }
-    var Tt = L(x()),
-        At = [
-            "https://images.unsplash.com/photo-1457269449834-928af64c684d?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1613136391099-c2757009bb12?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1457670912047-6ad4485d43eb?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1528834342297-fdefb9a5a92b?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1486608766848-9b9fe0c37b9d?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1551516114-063f4cef7213?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1577353716826-9151912dcdd1?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1600699260196-aca47e6d2125?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1508255139162-e1f7b7288ab7?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1507834392452-0559ec185662?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1505567745926-ba89000d255a?q=80&w=700&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1513267257196-91be473829b3?q=80&w=700&auto=format&fit=crop",
-        ],
-        Bt = !1;
-    function jt(e, t) {
-        t?.translate
-            ? zt()
-            : t
-                ? $t(t)
-                : Ot(e) && (Ct(Nt), (document.documentElement.dataset.supporters = ""));
-    }
-    function Ot(e) {
-        const t = !e?.supporters || !e.supporters.enabled,
-            n = -1 !== e?.review,
-            o = e?.supporters.closedMonth,
-            s = new Date().getMonth() + 1;
-        return !t && !n && s !== o;
-    }
-    function Pt(e) {
-        if (!Ot(e)) return;
-        const t = document.getElementById("supporters-notif-container"),
-            n = document.getElementById("supporters-notif-content"),
-            o = document.getElementById("supporters-notif-close"),
-            s = At[new Date().getMonth()];
-        (t?.classList.add("shown"),
-            t?.style.setProperty("--background", `url(${s})`),
-            zt(),
-            (0, Tt.onclickdown)(n, (e) => {
-                e instanceof PointerEvent &&
-                    0 === e.button &&
-                    (Mt(!0),
-                        (async function () {
-                            if (Bt) return;
-                            document.body.className.includes("potato") ||
-                                (function () {
-                                    const e = {};
-                                    ((e.canvas = document.getElementById("glitter")),
-                                        (e.context = e.canvas.getContext("2d")),
-                                        (e.snowflake = class {
-                                            size;
-                                            x;
-                                            baseX;
-                                            distance;
-                                            opacity;
-                                            radians;
-                                            fallSpeed;
-                                            y;
-                                            constructor() {
-                                                ((this.size = 1.5 * Math.random() + 1.5),
-                                                    (this.x =
-                                                        Math.random() * e.canvas.width -
-                                                        this.size -
-                                                        1 +
-                                                        this.size +
-                                                        1),
-                                                    (this.baseX = this.x),
-                                                    (this.distance = 50 * Math.random() + 1),
-                                                    (this.opacity = Math.random()),
-                                                    (this.radians = Math.random() * Math.PI * 2),
-                                                    (this.fallSpeed = 1.5 * Math.random() + 0.5),
-                                                    (this.y =
-                                                        Math.random() * e.canvas.height -
-                                                        this.size -
-                                                        1 +
-                                                        this.size +
-                                                        1));
-                                            }
-                                            draw = () => {
-                                                (this.y > e.canvas.height + this.size
-                                                    ? (this.y = -this.size)
-                                                    : (this.y += this.fallSpeed),
-                                                    (this.radians += 0.02),
-                                                    (this.x =
-                                                        this.baseX + this.distance * Math.sin(this.radians)),
-                                                    e.context.beginPath(),
-                                                    e.context.arc(
-                                                        this.x,
-                                                        this.y,
-                                                        this.size,
-                                                        0,
-                                                        2 * Math.PI,
-                                                    ),
-                                                    (e.context.shadowBlur = 8),
-                                                    (e.context.shadowColor = `rgba(255, 202, 56, ${this.opacity})`),
-                                                    (e.context.fillStyle = `rgba(255, 202, 56, ${this.opacity})`),
-                                                    e.context.fill(),
-                                                    e.context.closePath(),
-                                                    (e.context.shadowBlur = 0),
-                                                    (e.context.shadowColor = "transparent"));
-                                            };
-                                        }),
-                                        (e.setup = () => {
-                                            const t = 2e4;
-                                            ((e.canvas.width = e.context.canvas.clientWidth),
-                                                (e.canvas.height = e.context.canvas.clientHeight),
-                                                (e.flakes = []));
-                                            for (
-                                                let n = 0;
-                                                n < Math.ceil((e.canvas.width * e.canvas.height) / t);
-                                                n++
-                                            )
-                                                e.flakes.push(new e.snowflake());
-                                        }));
-                                    const t = gt(e.setup, 200);
-                                    (globalThis.addEventListener("resize", t),
-                                        (e.animate = () => {
-                                            (requestAnimationFrame(e.animate),
-                                                e.context.clearRect(
-                                                    0,
-                                                    0,
-                                                    e.canvas.width,
-                                                    e.canvas.height,
-                                                ));
-                                            for (const t of e.flakes) t.draw();
-                                        }),
-                                        e.setup(),
-                                        e.animate());
-                                })();
-                            const e = new Date().getMonth() + 1,
-                                t = new Date().getFullYear();
-                            let n,
-                                o = t;
-                            1 === e ? ((n = 12), (o -= 1)) : (n = e - 1);
-                            const s = document.querySelector("#supporters-modal"),
-                                i = document.querySelector("#supporters-modal main"),
-                                r = document.querySelector("#supporters-monthly ul"),
-                                a = document.querySelector("#supporters-once ul");
-                            try {
-                                const e = `https://kofi.bonjourr.fr/list?date=${o}-${n}`,
-                                    t = await (await fetch(e))?.json();
-                                if (t.length > 0) {
-                                    t.sort((e, t) => t.amount - e.amount);
-                                    for (const e of t) {
-                                        const t = e.monthly ? r : a,
-                                            n = `<li>${e.name}</li>`;
-                                        t?.insertAdjacentHTML("beforeend", n);
-                                    }
-                                    s?.classList.add("loaded");
-                                }
-                            } catch (e) {
-                                i &&
-                                    (i.innerHTML =
-                                        "<i>An error occured or we might be offline!</i>");
-                            }
-                            Bt = !0;
-                        })());
-            }),
-            (0, Tt.onclickdown)(o, () => {
-                (delete document.documentElement.dataset.supporters,
-                    t?.classList.remove("shown"),
-                    $t({ closed: !0 }));
-            }));
-    }
-    async function $t(e) {
-        const t = await ct.sync.get();
-        (void 0 !== e.enabled && (t.supporters.enabled = e.enabled),
-            void 0 !== e.closed &&
-            (t.supporters.closedMonth = new Date().getMonth() + 1),
-            ct.sync.set({ supporters: t.supporters }));
-    }
-    function zt() {
-        const e = `This ${new Date().toLocaleString("en-US", { month: "long" })}, Bonjourr is brought to you by our lovely supporters.`,
-            t = document.getElementById("supporters-notif-title"),
-            n = document.getElementById("supporters-notif-button");
-        t &&
-            n &&
-            ((t.textContent = kt(e)), (n.textContent = kt("Find out who they are")));
-    }
-    function Nt() {
-        const e = document.getElementById("supporters-modal-template"),
-            t = document.importNode(e.content, !0),
-            n = t.getElementById("supporters-modal-container");
-        (Dt(t, "header h2 span", "Supporters like you make Bonjourr possible"),
-            Dt(
-                t,
-                "header p",
-                "Here are the wonderful people who supported us last month. Thanks to them, we can keep Bonjourr free, open source, and constantly evolving.",
-            ),
-            Dt(t, "#supporters-monthly h3", "Our monthly supporters"),
-            Dt(t, "#supporters-once h3", "Our one-time supporters"),
-            Dt(t, "footer p", "Join the community and get your name in Bonjourr."),
-            Dt(t, "footer a span", "Donate"));
-        const o = t.getElementById("supporters-modal-close");
-        (document
-            .querySelector("#interface")
-            ?.insertAdjacentElement("beforebegin", n),
-            o.addEventListener("click", () => {
-                Mt(!1);
-            }),
-            n.addEventListener("click", (e) => {
-                "supporters-modal-container" === e.target?.id && Mt(!1);
-            }),
-            document.addEventListener("keyup", (e) => {
-                const t = void 0 !== document.documentElement.dataset.supportersModal;
-                "Escape" === e.key && t && Mt(!1);
-            }));
-    }
-    function Mt(e) {
-        (document.dispatchEvent(new CustomEvent("toggle-settings")),
-            e
-                ? (document.documentElement.dataset.supportersModal = "")
-                : delete document.documentElement.dataset.supportersModal);
-    }
-    function Dt(e, t, n) {
-        const o = e.querySelector(t);
-        o && (o.innerText = kt(n));
-    }
     function Rt(e) {
         return {
             Authorization: `Bearer ${e}`,
@@ -2018,7 +1796,7 @@
     var Ft = {
         ID: kt("Invalid Gist ID in settings."),
         TOKEN: kt("Invalid token."),
-        NOGIST: kt("Bonjourr file not found in Gists."),
+        NOGIST: kt("DashX file not found in Gists."),
         NOCONN: kt("Cannot connect to GitHub."),
         JSON: kt("Invalid JSON response from GitHub."),
         OTHER: kt("Unexpected GitHub Gist error."),
@@ -2289,9 +2067,9 @@
                         const e = t.gistToken ?? "",
                             o = await (async function (e, t, n) {
                                 const o =
-                                    "File automatically generated by Bonjourr. Learn more on https://bonjourr.fr/docs/overview/#sync",
+                                    "File automatically generated by DashX. Learn more on overview/#sync",
                                     s = {
-                                        "bonjourr-export.json": {
+                                        "DashX-Settings.json": {
                                             content: JSON.stringify(n, void 0, 2),
                                         },
                                     };
@@ -2367,7 +2145,7 @@
                                 if (t.status >= 300) throw new Error(Ft.OTHER);
                                 return (await t.json()).filter(
                                     (e) =>
-                                        !e.public && e.files["bonjourr-export.json"]?.size > 0,
+                                        !e.public && e.files["DashX-Settings.json"]?.size > 0,
                                 )[0]?.id;
                             })(t.gistToken)),
                             ct.local.set({ gistId: t.gistId }),
@@ -4779,9 +4557,9 @@
         Ts = {
             IMAGES: [
                 {
-                    optgroup: "Bonjourr",
+                    optgroup: "DashX",
                     options: [
-                        { name: "Bonjourr Daylight", value: "bonjourr-images-daylight" },
+                        { name: "DashX Daylight", value: "bonjourr-images-daylight" },
                     ],
                 },
                 {
@@ -4797,9 +4575,9 @@
             ],
             VIDEOS: [
                 {
-                    optgroup: "Bonjourr",
+                    optgroup: "DashX",
                     options: [
-                        { name: "Bonjourr Daylight", value: "bonjourr-videos-daylight" },
+                        { name: "DashX Daylight", value: "bonjourr-videos-daylight" },
                     ],
                 },
                 {
@@ -5736,7 +5514,7 @@
                     ct.sync.set({ backgrounds: t.backgrounds }),
                     bi(t.backgrounds));
                 const o = n.backgroundCollections[e.provider]?.length > 0,
-                    s = e.provider.includes("bonjourr");
+                    s = e.provider.includes("bonjourr"); //hihrllo
                 (o || s) && ai(t.backgrounds, n);
             }
             if (void 0 !== e.query) {
@@ -6050,8 +5828,8 @@
                                         (d.textContent = s ? " - " : " "),
                                         (u.textContent = c),
                                         e.page.includes("unsplash")
-                                            ? ((l.href = `${e.page}?utm_source=Bonjourr&utm_medium=referral`),
-                                                (m.href = `https://unsplash.com/@${e.username}?utm_source=Bonjourr&utm_medium=referral`))
+                                            ? ((l.href = `${e.page}?utm_source=DashX&utm_medium=referral`),
+                                                (m.href = `https://unsplash.com/@${e.username}?utm_source=DashX&utm_medium=referral`))
                                             : (l.href = e.page),
                                         (n.textContent = ""),
                                         n.append(g, l, d, m, u),
@@ -6376,150 +6154,6 @@
                 new CustomEvent("muteStatusChange", { detail: { status: e } }),
             );
         });
-    }
-    var xi = {
-        en: "<b>Bonjourr just got a major update! ✨</b> Discover what’s new: Pomodoro timer, universal right-click menu, improved links, refreshed design, and more.",
-        fr: "<b>Bonjourr vient d'avoir une mise à jour majeure ! ✨</b> Découvrez les nouveautés : minuteur Pomodoro, menu clic droit universel, liens améliorés, nouveau design, et bien plus encore.",
-        de: "<b>Bonjourr hat ein großes Update erhalten! ✨</b> Entdecke die Neuerungen: Pomodoro-Timer, universelles Rechtsklick-Menü, verbesserte Links, neues Design und mehr.",
-        it: "<b>Bonjourr ha ricevuto un aggiornamento importante! ✨</b> Scopri le novità: timer Pomodoro, menu clic destro universale, link migliorati, design rinnovato e molto altro.",
-        es: "<b>¡Bonjourr acaba de recibir una gran actualización! ✨</b> Descubre las novedades: temporizador Pomodoro, menú de clic derecho universal, enlaces mejorados, diseño renovado y mucho más.",
-        "pt-BR":
-            "<b>Bonjourr acabou de receber uma grande atualização! ✨</b> Descubra as novidades: timer Pomodoro, menu de clique direito universal, links aprimorados, design renovado e muito mais.",
-        "pt-PT":
-            "<b>O Bonjourr recebeu uma grande atualização! ✨</b> Descubra as novidades: temporizador Pomodoro, menu de clique direito universal, ligações melhoradas, design renovado e muito mais.",
-        nl: "<b>Bonjourr heeft een grote update gekregen! ✨</b> Ontdek wat er nieuw is: Pomodoro-timer, universeel rechtermuisknopmenu, verbeterde links, vernieuwd design en meer.",
-        da: "<b>Bonjourr har fået en stor opdatering! ✨</b> Se nyhederne: Pomodoro-timer, universel højreklikmenu, forbedrede links, opdateret design og meget mere.",
-        sv: "<b>Bonjourr har fått en stor uppdatering! ✨</b> Upptäck nyheterna: Pomodoro-timer, universell högerklicksmeny, förbättrade länkar, uppdaterad design och mer.",
-        nb: "<b>Bonjourr har fått en stor oppdatering! ✨</b> Oppdag nyhetene: Pomodoro-timer, universell høyreklikkmeny, forbedrede lenker, oppdatert design og mer.",
-        fi: "<b>Bonjourr on saanut suuren päivityksen! ✨</b> Tutustu uutuuksiin: Pomodoro-ajastin, yleinen hiiren oikean painikkeen valikko, parannetut linkit, uudistettu ulkoasu ja paljon muuta.",
-        pl: "<b>Bonjourr otrzymał dużą aktualizację! ✨</b> Sprawdź nowości: timer Pomodoro, uniwersalne menu prawego przycisku myszy, ulepszone linki, odświeżony wygląd i więcej.",
-        cs: "<b>Bonjourr dostal velkou aktualizaci! ✨</b> Objevte novinky: Pomodoro časovač, univerzální nabídka pravého kliknutí, vylepšené odkazy, obnovený design a další.",
-        hr: "<b>Bonjourr je dobio veliko ažuriranje! ✨</b> Otkrijte novosti: Pomodoro mjerač vremena, univerzalni izbornik desnog klika, poboljšane poveznice, osvježen dizajn i još mnogo toga.",
-        sk: "<b>Bonjourr dostal veľkú aktualizáciu! ✨</b> Objavte novinky: Pomodoro časovač, univerzálne menu pravého kliknutia, vylepšené odkazy, obnovený dizajn a viac.",
-        hu: "<b>A Bonjourr jelentős frissítést kapott! ✨</b> Fedezd fel az újdonságokat: Pomodoro időzítő, univerzális jobbklikk menü, továbbfejlesztett hivatkozások, megújult dizájn és még sok más.",
-        ro: "<b>Bonjourr a primit o actualizare majoră! ✨</b> Descoperă noutățile: cronometru Pomodoro, meniu universal de clic dreapta, linkuri îmbunătățite, design reîmprospătat și multe altele.",
-        el: "<b>Το Bonjourr μόλις απέκτησε μια μεγάλη ενημέρωση! ✨</b> Ανακαλύψτε τι νέο υπάρχει: χρονοδιακόπτης Pomodoro, καθολικό μενού δεξιού κλικ, βελτιωμένοι σύνδεσμοι, ανανεωμένος σχεδιασμός και πολλά ακόμη.",
-        hy: "<b>Bonjourr-ը ստացել է մեծ թարմացում։ ✨</b> Բացահայտեք նորությունները․ Pomodoro ժամանակաչափ, ունիվերսալ աջ սեղմման ընտրացանկ, բարելավված հղումներ, թարմացված դիզայն և ավելին։",
-        sr: "<b>Bonjourr je dobio veliko ažuriranje! ✨</b> Otkrijte novosti: Pomodoro tajmer, univerzalni meni desnog klika, unapređene veze, osvežen dizajn i još mnogo toga.",
-        "sr-YU":
-            "<b>Bonjourr je dobio veliko ažuriranje! ✨</b> Otkrijte novosti: Pomodoro tajmer, univerzalni meni desnog klika, unapređene veze, osvežen dizajn i još mnogo toga.",
-        uk: "<b>Bonjourr отримав велике оновлення! ✨</b> Дізнайтеся, що нового: таймер Pomodoro, універсальне меню правої кнопки миші, покращені посилання, оновлений дизайн та інше.",
-        ru: "<b>Bonjourr получил крупное обновление! ✨</b> Узнайте, что нового: таймер Pomodoro, универсальное контекстное меню, улучшенные ссылки, обновлённый дизайн и многое другое.",
-        tr: "<b>Bonjourr büyük bir güncelleme aldı! ✨</b> Yenilikleri keşfedin: Pomodoro zamanlayıcı, evrensel sağ tık menüsü, geliştirilmiş bağlantılar, yenilenmiş tasarım ve daha fazlası.",
-        ar: "<b>حصل Bonjourr على تحديث كبير! ✨</b> اكتشف الميزات الجديدة: مؤقّت بومودورو، قائمة نقر بزر الفأرة الأيمن شاملة، روابط محسّنة، تصميم مُحدّث والمزيد.",
-        fa: "<b>Bonjourr یک به‌روزرسانی بزرگ دریافت کرد! ✨</b> ویژگی‌های جدید را کشف کنید: تایمر پومودورو، منوی کلیک راست سراسری، لینک‌های بهبودیافته، طراحی تازه و موارد بیشتر.",
-        "zh-CN":
-            "<b>Bonjourr 刚刚迎来一次重大更新！✨</b> 探索新功能：番茄钟、通用右键菜单、改进的链接、焕然一新的设计等。",
-        "zh-HK":
-            "<b>Bonjourr 剛剛推出重大更新！✨</b> 探索新功能：番茄鐘、通用右鍵選單、改進的連結、煥然一新的設計等。",
-        "zh-TW":
-            "<b>Bonjourr 剛推出重大更新！✨</b> 探索新功能：番茄鐘、通用右鍵選單、改進的連結、全新設計等。",
-        ja: "<b>Bonjourr に大規模アップデートが登場！✨</b> 新機能をご紹介：ポモドーロタイマー、ユニバーサル右クリックメニュー、リンクの改善、刷新されたデザインなど。",
-        id: "<b>Bonjourr baru saja mendapatkan pembaruan besar! ✨</b> Temukan fitur baru: timer Pomodoro, menu klik kanan universal, tautan yang ditingkatkan, desain baru, dan banyak lagi.",
-        ca: "<b>Bonjourr ha rebut una actualització important! ✨</b> Descobreix les novetats: temporitzador Pomodoro, menú de clic dret universal, enllaços millorats, disseny renovat i molt més.",
-        vi: "<b>Bonjourr vừa nhận được bản cập nhật lớn! ✨</b> Khám phá các tính năng mới: bộ hẹn giờ Pomodoro, menu chuột phải toàn cục, liên kết được cải thiện, giao diện làm mới và nhiều hơn nữa.",
-    },
-        _i = {
-            chrome:
-                "https://github.com/Pro-Bandey/DashX",
-            opera:
-                "https://github.com/Pro-Bandey/DashX",
-            firefox:
-                "https://github.com/Pro-Bandey/DashX",
-            safari: "https://github.com/Pro-Bandey/DashX",
-            edge: "https://github.com/Pro-Bandey/DashX",
-            other: "https://github.com/Pro-Bandey/DashX",
-        };
-    function Si(e, t) {
-        if (
-            (function (e = "") {
-                return ["all", "major", "off"].includes(e);
-            })(t?.announcements)
-        )
-            return void ct.sync.set({ announcements: t?.announcements });
-        if (!e || "off" === e?.announce) return;
-        if (e.old && -1 === e.review) {
-            const t = (e) => Number.parseInt(e.split(".")[0]),
-                n = t(e.new) > t(e.old),
-                o = e.new !== e.old && "22.0.0" === e.new,
-                s = "major" === e.announce && n,
-                i = "all" === e.announce && o;
-            if ("true" === localStorage.hasUpdated || i || s)
-                return ((localStorage.hasUpdated = "true"), void qi("announce", !0));
-        }
-        if (-1 === e.review) return;
-        const n = parseInt(localStorage.reviewCounter ?? "0");
-        n > 30 ? qi("review") : (localStorage.reviewCounter = n + 1);
-    }
-    function qi(e, t = !1) {
-        const n = document.getElementById("popup-template"),
-            o = document.importNode(n.content, !0),
-            s = o.getElementById("popup"),
-            i = o.getElementById("popup_desc"),
-            r = o.getElementById("popup_close"),
-            a = o.getElementById("popup_buttons");
-        if (s) {
-            if (
-                ("review" === e &&
-                    ((i.textContent = kt(
-                        "Love using Bonjourr? Consider giving us a review or donating, that would help a lot! 😇",
-                    )),
-                        a.appendChild(Ii(_i[Fe], kt("Review"))),
-                        a.appendChild(Ii("https://github.com/Pro-Bandey/DashX", kt("Donate")))),
-                    "announce" === e)
-            ) {
-                const e = bt(),
-                    t = xi[e] ?? xi.en,
-                    n = `${kt("Read the blog post")} 📝`;
-                ((i.innerHTML = t),
-                    a.appendChild(
-                        Ii(
-                            "https://github.com/Pro-Bandey/DashX",
-                            n,
-                        ),
-                    ));
-            }
-            (r?.addEventListener("click", Ti),
-                document.body.appendChild(s),
-                s.classList.add(e),
-                s.classList.toggle("withIcon", t),
-                setTimeout(
-                    () => document.getElementById("popup")?.classList.add("shown"),
-                    800,
-                ),
-                setTimeout(
-                    () =>
-                        document
-                            .getElementById("credit-container")
-                            ?.setAttribute("style", "opacity: 0"),
-                    400,
-                ));
-        }
-    }
-    function Ii(e, t) {
-        const n = document.createElement("a");
-        return (
-            (n.href = e),
-            (n.rel = "noreferrer"),
-            (n.textContent = t),
-            n.addEventListener("pointerdown", Ci),
-            n
-        );
-    }
-    function Ci() {
-        (ct.sync.set({ review: -1 }),
-            localStorage.removeItem("reviewCounter"),
-            localStorage.removeItem("hasUpdated"));
-    }
-    function Ti() {
-        (setTimeout(() => document.getElementById("popup")?.remove(), 200),
-            setTimeout(
-                () =>
-                    document.getElementById("credit-container")?.removeAttribute("style"),
-                600,
-            ),
-            document.getElementById("popup")?.classList.remove("shown"),
-            Ci());
     }
     var Ai = [
         "time",
@@ -8781,7 +8415,7 @@
         gc = document.getElementById("pmdr_timer"),
         fc = document.querySelectorAll('#pmdr_modes input[type="radio"]'),
         pc = document.getElementById("pmdr-focus"),
-        hc = new BroadcastChannel("bonjourr_pomodoro"),
+        hc = new BroadcastChannel("dashx_pomodoro"),
         yc = 1e4,
         vc = (e = "") => (document.getElementById(`pmdr-${e}`).checked = !0),
         bc = (e) => oc.timeFor[e];
@@ -9266,23 +8900,14 @@
                 })(
                     (e = (function (e) {
                         return (
-                            e.reviewPopup &&
-                            (e.review =
-                                "removed" === e.reviewPopup ? -1 : +e.reviewPopup),
+                            e.font &&
+                            ((e.font.weightlist = e.font?.availWeights ?? []),
+                                (e.font.url = void 0),
+                                (e.font.availWeights = void 0),
+                                void 0 === e.font.system && (e.font.system = !1)),
                             e
                         );
-                    })(
-                        (e = (function (e) {
-                            return (
-                                e.font &&
-                                ((e.font.weightlist = e.font?.availWeights ?? []),
-                                    (e.font.url = void 0),
-                                    (e.font.availWeights = void 0),
-                                    void 0 === e.font.system && (e.font.system = !1)),
-                                e
-                            );
-                        })(e)),
-                    )),
+                    })(e)),
                 )),
             )),
             n < 18 &&
@@ -9666,7 +9291,6 @@
             vt(n, r.lang),
             wl(),
             vi(r, i),
-            Pt(r),
             (function (e, t) {
                 const n = document.getElementById("settings"),
                     o = e.quotes?.userlist?.[0] ? e.quotes?.userlist : void 0;
@@ -9726,7 +9350,6 @@
                         Bl("i_provider", e.weather?.provider ?? ""),
                         Bl("i_weight", e.font?.weight || "300"),
                         Bl("i_size", e.font?.size || (Ue ? "11" : "14")),
-                        Bl("i_announce", e.announcements ?? "major"),
                         Bl("i_synctype", t.syncType ?? ("online" === Re ? "off" : "browser")),
                         Bl("i_pmdr_break", e.pomodoro.timeFor.break / 60),
                         Bl("i_pmdr_pomodoro", e.pomodoro.timeFor.pomodoro / 60),
@@ -9760,7 +9383,6 @@
                         Al("i_sbsuggestions", e.searchbar?.suggestions ?? !0),
                         Al("i_sbnewtab", e.searchbar?.newtab ?? !1),
                         Al("i_qtauthor", e.quotes?.author ?? !1),
-                        Al("i_supporters_notif", e.supporters?.enabled ?? !0),
                         Zt("solid-background", e.backgrounds.color),
                         Zt("texture-color", e.backgrounds.texture.color ?? "#ffffff"),
                         Tl("i_sb-shade")?.classList.toggle(
@@ -9927,7 +9549,6 @@
                                     xl(),
                                     wl(),
                                     El(),
-                                    jt(void 0, { translate: !0 }),
                                     xc());
                             })(this.value);
                         }),
@@ -10333,12 +9954,6 @@
                         Tl("i_pagewidth").addEventListener("mouseup", () =>
                             Ar(void 0, { overlay: !1 }),
                         ),
-                        Tl("i_announce").addEventListener("change", function () {
-                            Si(void 0, { announcements: this.value });
-                        }),
-                        (0, al.onclickdown)(Tl("i_supporters_notif"), (e, t) => {
-                            jt(void 0, { enabled: t.checked });
-                        }),
                         Tl("i_synctype").addEventListener("change", function () {
                             tn(void 0, { type: this.value });
                         }),
@@ -10386,7 +10001,7 @@
                                     e.setAttribute("tabindex", "-1"),
                                     e.setAttribute(
                                         "download",
-                                        `bonjourr-${n?.about?.version} ${s} ${i}.json`,
+                                        `dashx-${n?.about?.version} ${s} ${i}.json`,
                                     ),
                                     e.click());
                             })();
@@ -10611,17 +10226,15 @@
             t && ct.sync.set({ showall: e }));
     }
     function xl() {
-        const e = document.querySelector("#signature-one"),
-            t = document.querySelector("#signature-two"),
-            n = document.getElementById("version"),
-            o = Math.random() > 0.5;
-        (e &&
-            t &&
-            ((e.href = o ? "https://github.com/Pro-Bandey" : "https://github.com/Pro-Bandey/DashX"),
-                (t.href = o ? "https://tahoe.be/" : "https://victr.me/"),
-                (e.textContent = o ? "Pro-Bandey" : "DashX"),
-                (t.textContent = o ? "DashX" : "Pro-Bandey")),
-            n && (n.textContent = Ge.about.version));
+        const signature = document.querySelector("#signature-one");
+        const version = document.getElementById("version");
+        if (signature) {
+            signature.href = "https://github.com/Pro-Bandey";
+            signature.textContent = "Pro-Bandey";
+        }
+        if (version) {
+            version.textContent = Ge.about.version;
+        }
     }
     function _l() {
         const e = document.getElementById("mobile-drag-zone"),
@@ -10976,24 +10589,17 @@
                 document.getElementById("main")?.classList.toggle("hidden", !e.main),
                 (o = () => {
                     (document.body.classList.remove("init"),
-                        jt(e),
                         (function () {
                             if ("firefox" === Fe || "safari" === Fe) return;
                             const e = 144e5,
                                 t = "yes" === localStorage.potato;
-                            if (
-                                Date.now() -
-                                Number.parseInt(localStorage.lastPotatoCheck ?? "0") <
-                                e
-                            )
+                            if (Date.now() - Number.parseInt(localStorage.lastPotatoCheck ?? "0") < e)
                                 return void document.body.classList.toggle("potato", t);
                             const n = document.createElement("canvas")?.getContext("webgl"),
                                 o = n?.getExtension("WEBGL_debug_renderer_info");
                             if ("chrome" === Fe && !n)
                                 return void document.body.classList.add("potato");
-                            const s = n
-                                ?.getParameter(o?.UNMASKED_VENDOR_WEBGL ?? 0)
-                                .toString(),
+                            const s = n?.getParameter(o?.UNMASKED_VENDOR_WEBGL ?? 0).toString(),
                                 i = n?.getParameter(o?.UNMASKED_RENDERER_WEBGL ?? 0).toString(),
                                 r = s.includes("Google") && i.includes("SwiftShader");
                             ((localStorage.potato = r ? "yes" : "no"),
@@ -11001,18 +10607,10 @@
                                 document.body.classList.toggle("potato", r));
                         })(),
                         document.body.addEventListener("mousedown", Nl),
-                        document
-                            .getElementById("b_editmove")
-                            ?.addEventListener("click", Ml),
+                        document.getElementById("b_editmove")?.addEventListener("click", Ml),
                         document.addEventListener("click", $l),
                         document.addEventListener("keydown", Pl),
-                        document.addEventListener("keyup", Pl),
-                        Si({
-                            announce: e.announcements,
-                            review: e.review ?? 0,
-                            new: Pe,
-                            old: n,
-                        }));
+                        document.addEventListener("keyup", Pl));
                 }),
                 o && (qo = o));
             var o;
