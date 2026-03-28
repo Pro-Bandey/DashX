@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
   "short_name": "DashX",
-  "version": "22.0.0",
+  "version": "22.2.3",
   "description": "__MSG_extensionDesc__",
   "author": "Pro Bandey",
   "homepage_url": "https://github.com/Pro-Bandey/DashX",
