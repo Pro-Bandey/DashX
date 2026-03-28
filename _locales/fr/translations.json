@@ -104,7 +104,7 @@
   "Custom collection": "Collection personnalisée",
   "Custom search": "Recherche personnalisée",
   "nature, winter": "nature, hiver",
-  "DashX Daylight": "Lumière du jour DashX
+  "DashX Daylight": "Lumière du jour DashX",
   "Pixabay Search": "Recherche Pixabay",
   "Unsplash Collections": "Collections Unsplash",
   "Unsplash Search": "Recherche Unsplash",
@@ -121,7 +121,7 @@
   "Loop fade": "Fondu en boucle",
   "Mute videos": "Désactiver le son des vidéos",
   "Options": "Options",
-  "Use the button above to import files from your device and set them as backgrounds in DashX "Importez des fichiers depuis votre appareil pour les utiliser en tant qu'arrière-plan dans Da DashX
+  "Use the button above to import files from your device and set them as backgrounds in DashX ": "Importez des fichiers depuis votre appareil pour les utiliser en tant qu'arrière-plan dans Da DashX",
   "Frequency": "Fréquence",
   "Daylight": "Lumière du jour",
   "Every tab": "Chaque onglet",
@@ -348,7 +348,7 @@
   "Supporters notifications appear monthly at the top of your settings as a thank you to people who donate and support our work.": "Les notifications de donateurs apparaissent mensuellement en haut de vos paramètres en guise de remerciement aux personnes qui font des dons et soutiennent notre travail.",
   "Settings management": "Gestion des paramètres",
   "Tips on imports & exports": "Conseils sur les importations et les exportations",
-  "Transfer your settings between multiple instances of DashX "Transférez vos paramètres entre plusieurs instances de Da DashX
+  "Transfer your settings between multiple instances of DashX ": "Transférez vos paramètres entre plusieurs instances de Da DashX",
   "Synchronization type": "Type de synchronisation",
   "Persistent storage": "Stockage persistant",
   "What is persistent storage?": "Qu'est-ce que le stockage persistant?",
@@ -388,13 +388,13 @@
   "Are you sure?": "Vous êtes sûr ?",
   "I am sure": "Je suis sûr",
   "No, go back": "Finalement non",
-  "DashX's website": "Site de DashX
+  "DashX's website": "Site de DashX",
   "Join us on Bluesky": "Rejoignez-nous sur Bluesky",
-  "DashX's GitHub repository": "Repo GitHub de DashX
-  "DashX's documentation": "Documentation de DashX
+  "DashX's GitHub repository": "Repo GitHub de DashX",
+  "DashX's documentation": "Documentation de DashX",
   "Made in France with ❤️": "Fabriqué en France avec ❤️",
   "by": "par",
   "Consider": "N'hésitez pas à",
   "donating": "faire un don",
-  "if you love DashX"si vous aimez Da DashX
+  "if you love DashX": "si vous aimez Da DashX"
 }

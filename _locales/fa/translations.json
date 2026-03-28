@@ -121,7 +121,7 @@
   "Loop fade": "محو شدن حلقه",
   "Mute videos": "بی‌صدا کردن ویدیوها",
   "Options": "گزینه‌ها",
-  "Use the button above to import files from your device and set them as backgrounds in DashX "از دکمه بالا برای وارد کردن فایل‌ها از دستگاه خود و تنظیم آنها به عنوان پس‌زمینه در DashX استفاده کنید.",
+  "Use the button above to import files from your device and set them as backgrounds in DashX": " از دکمه بالا برای وارد کردن فایل‌ها از دستگاه خود و تنظیم آنها به عنوان پس‌زمینه در DashX استفاده کنید.",
   "Frequency": "زمان‌بندی",
   "Daylight": "روز روشن",
   "Every tab": "هر صفحه",
@@ -348,7 +348,7 @@
   "Supporters notifications appear monthly at the top of your settings as a thank you to people who donate and support our work.": "اعلانات حامیان ماهانه در بالای تنظیمات شما به عنوان تشکر از افرادی که به کار ما کمک مالی می‌کنند و از آن پشتیبانی می‌نمایند، ظاهر می‌شوند.",
   "Settings management": "مدیریت تنظیمات",
   "Tips on imports & exports": "نکاتی در مورد واردات و صادرات",
-  "Transfer your settings between multiple instances of DashX "تنظیمات خود را بین چندین نسخه‌ی مختلف بُنژور انتقال دهید.",
+  "Transfer your settings between multiple instances of DashX ": "تنظیمات خود را بین چندین نسخه‌ی مختلف بُنژور انتقال دهید.",
   "Synchronization type": "نوع همگام سازی",
   "Persistent storage": "ذخیره‌سازی پایدار",
   "What is persistent storage?": "ذخیره‌سازی پایدار چیست؟",
@@ -388,13 +388,13 @@
   "Are you sure?": "آیا مطمئن هستید؟",
   "I am sure": "مطمئن‌ام",
   "No, go back": "نه، برگرد عقب",
-  "DashX's website": "وب سایت DashX
+  "DashX's website": "وب سایت DashX",
   "Join us on Bluesky": "به بلوسکای ما بپیوندید",
   "DashX's GitHub repository": "مخزن DashXGitHub",
-  "DashX's documentation": "مستندات DashX
+  "DashX's documentation": "مستندات DashX",
   "Made in France with ❤️": "ساخته شده در فرانسه با ❤️",
   "by": "توسط",
   "Consider": "اگر از بُنژور لذت می‌برید، در نظر بگیرید که",
   "donating": "کمک مالی",
-  "if you love DashX"کنید."
+  "if you love DashX ": "کنید."
 }

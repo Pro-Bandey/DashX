@@ -76,7 +76,7 @@
   "Most visited": "Найбольш наведванняў",
   "Import selection": "Імпартаваць вылучанае",
   "(synced)": "(сінхранізавана)",
- "Synchronized links require the user to accept permissions": "Для сінхранізацыі спасылак патрабуецца дазвол карыстальніка",
+  "Synchronized links require the user to accept permissions": "Для сінхранізацыі спасылак патрабуецца дазвол карыстальніка",
   "Ask permission": "Запытаць дазвол",
   "General": "Асноўныя",
   "Show all settings": "Паказаць усе налады",
@@ -121,7 +121,7 @@
   "Loop fade": "Затуханне цыклу",
   "Mute videos": "Выключыць гук відэа",
   "Options": "Налады",
-  "Use the button above to import files from your device and set them as backgrounds in DashX "Націсніце кнопку вышэй, каб задаць файлы з вашай прылады як фоны ў Da DashX
+  "Use the button above to import files from your device and set them as backgrounds in DashX ": "Націсніце кнопку вышэй, каб задаць файлы з вашай прылады як фоны ў Da DashX",
   "Frequency": "Змяняць",
   "Daylight": "удзень",
   "Every tab": "з кожным адкрыццём",
@@ -348,7 +348,7 @@
   "Supporters notifications appear monthly at the top of your settings as a thank you to people who donate and support our work.": "Падзяка тым, хто падтрымаў наш праект, ахвяраваўшы нам грошы, штомесяц з'яўляецца ўверсе меню налад.",
   "Settings management": "Кіраванне наладамі",
   "Tips on imports & exports": "Што гэта?",
-  "Transfer your settings between multiple instances of DashX "Сінхранізуйце налады паміж некалькімі ўсталёўкамі Da DashX
+  "Transfer your settings between multiple instances of DashX ": "Сінхранізуйце налады паміж некалькімі ўсталёўкамі Da DashX,",
   "Synchronization type": "Тып сінхранізацыі",
   "Persistent storage": "Пастаяннае сховішча",
   "What is persistent storage?": "Што гэта?",
@@ -388,13 +388,13 @@
   "Are you sure?": "Ці вы ўпэўненыя?",
   "I am sure": "Так, скінуць",
   "No, go back": "Не, вярнуцца",
-  "DashX's website": "Сайт DashX
+  "DashX's website": "Сайт DashX",
   "Join us on Bluesky": "Сачыце за намі ў Bluesky",
   "DashX's GitHub repository": "Рэпазіторый DashX на GitHub",
-  "DashX's documentation": "Дакументацыя DashX
+  "DashX's documentation": "Дакументацыя DashX",
   "Made in France with ❤️": "Зроблена ў Францыі з ❤️",
   "by": "рукамі",
   "Consider": "Калі ласка,",
   "donating": "ахвяруйце нам грошы,",
-  "if you love DashX"калі вам падабаецца Da DashX
+  "if you love DashX": "калі вам падабаецца Da DashX"
 }
