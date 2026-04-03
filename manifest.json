@@ -11,7 +11,8 @@
     "128": "src/assets/favicons/favicon-128x128.png"
   },
   "chrome_url_overrides": {
-    "newtab": "index.html"
+    "newtab": "index.html",
+    "homepage": "index.html"
   },
   "action": {
     "title": "__MSG_extensionName__"
