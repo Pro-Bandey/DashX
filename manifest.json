@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
   "short_name": "DashX",
-  "version": "22.2.3",
+  "version": "22.2.4",
   "description": "__MSG_extensionDesc__",
   "author": "Pro Bandey",
   "homepage_url": "https://github.com/Pro-Bandey/DashX",
@@ -11,7 +11,8 @@
     "128": "src/assets/favicons/favicon-128x128.png"
   },
   "chrome_url_overrides": {
-    "newtab": "index.html"
+    "newtab": "index.html",
+    "homepage": "index.html"
   },
   "action": {
     "title": "__MSG_extensionName__"
