@@ -1,6 +1,6 @@
 globalThis.chrome
   ? chrome.storage &&
-    (chrome.action.onClicked.addListener(createNewTab),
+  (chrome.action.onClicked.addListener(createNewTab),
     chrome.runtime.onInstalled.addListener(handleInstalled),
     chrome.runtime.setUninstallURL("https://github.com/Pro-Bandey/DashX"))
   : (self.addEventListener("activate", updateCache),
