@@ -5,26 +5,34 @@
   "version": "22.2.3",
   "description": "__MSG_extensionDesc__",
   "author": "Pro Bandey",
-  "homepage_url": "https://github.com/Pro-Bandey/DashX",
+  "homepage_url": "https://Pro-Bandey.github.io/Projects/?Pro=DashX",
   "default_locale": "en",
+
   "icons": {
     "128": "src/assets/favicons/favicon-128x128.png"
   },
-  "chrome_settings_overrides": {},
-  "chrome_url_overrides": {
-    "newtab": "index.html"
-  },
+  
+
   "action": {
     "default_icon": {
       "128": "src/assets/favicons/favicon-128x128.png"
     },
     "default_title": "__MSG_extensionName__"
   },
+
+  "permissions": ["storage"],
+  
+  "optional_permissions": ["bookmarks", "topSites", "search"],
+
+  "chrome_settings_overrides": {},
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+
   "background": {
     "scripts": ["src/scripts/service-worker.js"]
   },
-  "permissions": ["storage"],
-  "optional_permissions": ["bookmarks", "topSites", "search"],
+  
   "browser_specific_settings": {
     "gecko": {
       "id": "dashx@pro-bandey.com",
